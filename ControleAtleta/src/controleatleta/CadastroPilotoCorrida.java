@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
-public class CadastroBoxeador extends javax.swing.JFrame {
+public class CadastroPilotoCorrida extends javax.swing.JFrame {
 
     private final byte SEXO_MASCULINO_INDICE = 0;
     private final byte SEXO_FEMININO_INDICE = 1;
@@ -32,7 +32,7 @@ public class CadastroBoxeador extends javax.swing.JFrame {
     private DefaultListModel telefonesListModel;
     private DefaultListModel premiacaoListModel;
 
-    public CadastroBoxeador() {
+    public CadastroPilotoCorrida() {
         initComponents();
         this.habilitarDesabilitarCampos();
         this.controlePilotoCorrida = new ControlePilotoCorrida();
@@ -400,7 +400,7 @@ public class CadastroBoxeador extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -500,6 +500,7 @@ public class CadastroBoxeador extends javax.swing.JFrame {
 
         jButtonNovo.setText("Novo");
         jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNovoActionPerformed(evt);
             }
@@ -1007,26 +1008,26 @@ public class CadastroBoxeador extends javax.swing.JFrame {
             );
 
             pack();
-        }// </editor-fold>//GEN-END:initComponents
+        }// </editor-fold>                        
 
-    private void jComboBoxCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCategoriaActionPerformed
+    private void jComboBoxCategoriaActionPerformed(java.awt.event.ActionEvent evt) {                                                   
         this.atualizarCategoriaPeso();
-    }//GEN-LAST:event_jComboBoxCategoriaActionPerformed
+    }                                                  
 
-    private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovoActionPerformed
+    private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {                                            
         piloto = null;
         modoAlteracao = true;
         novoRegistro = true;
         this.limparCampos();
         this.habilitarDesabilitarCampos();
         this.jTextFieldNome.requestFocus();
-    }//GEN-LAST:event_jButtonNovoActionPerformed
+    }                                           
 
-    private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
+    private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {                                              
         this.salvarRegistro();
-    }//GEN-LAST:event_jButtonSalvarActionPerformed
+    }                                             
 
-    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {                                                
         if (novoRegistro == true) {
             this.limparCampos();
         } else {
@@ -1035,54 +1036,54 @@ public class CadastroBoxeador extends javax.swing.JFrame {
         modoAlteracao = false;
         novoRegistro = false;
         this.habilitarDesabilitarCampos();
-    }//GEN-LAST:event_jButtonCancelarActionPerformed
+    }                                               
 
-    private void jTextFieldPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPesoActionPerformed
-    }//GEN-LAST:event_jTextFieldPesoActionPerformed
+    private void jTextFieldPesoActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    }                                              
 
-    private void jTextFieldPesoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextFieldPesoPropertyChange
-    }//GEN-LAST:event_jTextFieldPesoPropertyChange
+    private void jTextFieldPesoPropertyChange(java.beans.PropertyChangeEvent evt) {                                              
+    }                                             
 
-    private void jTextFieldPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldPesoFocusLost
+    private void jTextFieldPesoFocusLost(java.awt.event.FocusEvent evt) {                                         
         this.atualizarCategoriaPeso();
-    }//GEN-LAST:event_jTextFieldPesoFocusLost
+    }                                        
 
-    private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
+    private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {                                               
         modoAlteracao = true;
         novoRegistro = false;
         this.habilitarDesabilitarCampos();
         this.jTextFieldNome.requestFocus();
-    }//GEN-LAST:event_jButtonAlterarActionPerformed
+    }                                              
 
-    private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
+    private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {                                               
         this.controlePilotoCorrida.remover(piloto);
         piloto = null;
         this.limparCampos();
         this.carregarListaBoxeadores();
         this.habilitarDesabilitarCampos();
-    }//GEN-LAST:event_jButtonExcluirActionPerformed
+    }                                              
 
-private void jButtonAdicionarTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarTelefoneActionPerformed
+private void jButtonAdicionarTelefoneActionPerformed(java.awt.event.ActionEvent evt) {                                                         
     CadastroTelefone cadastro = new CadastroTelefone(this, true);
     cadastro.setVisible(true);
     if (cadastro.getTelefone() != null) {
         telefonesListModel.addElement(cadastro.getTelefone());
     }
     cadastro.dispose();
-}//GEN-LAST:event_jButtonAdicionarTelefoneActionPerformed
+}                                                        
 
-private void jButtonRemoverTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverTelefoneActionPerformed
+private void jButtonRemoverTelefoneActionPerformed(java.awt.event.ActionEvent evt) {                                                       
     if (jListTelefones.getSelectedIndex() != -1) {
         telefonesListModel.removeElementAt(jListTelefones.getSelectedIndex());
     }
-}//GEN-LAST:event_jButtonRemoverTelefoneActionPerformed
+}                                                      
 
-private void jButtonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarActionPerformed
+private void jButtonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {                                                 
     String pesquisa = JOptionPane.showInputDialog("Informe o nome do Boxeador.");
     if (pesquisa != null) {
         this.pesquisarBoxeador(pesquisa);
     }
-}//GEN-LAST:event_jButtonPesquisarActionPerformed
+}                                                
 
     private void pesquisarBoxeador(String nome) {
         PilotoCorrida boxeadorPesquisado = controlePilotoCorrida.pesquisar(nome);
@@ -1096,34 +1097,34 @@ private void jButtonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//
         }
     }
 
-private void jButtonAdicionarPremiacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarPremiacaoActionPerformed
+private void jButtonAdicionarPremiacaoActionPerformed(java.awt.event.ActionEvent evt) {                                                          
     CadastroPremiacao cadastro = new CadastroPremiacao(this, true);
     cadastro.setVisible(true);
     if (cadastro.getPremiacao() != null) {
         premiacaoListModel.addElement(cadastro.getPremiacao());
     }
     cadastro.dispose();
-}//GEN-LAST:event_jButtonAdicionarPremiacaoActionPerformed
+}                                                         
 
-private void jButtonRemoverPremiacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverPremiacaoActionPerformed
+private void jButtonRemoverPremiacaoActionPerformed(java.awt.event.ActionEvent evt) {                                                        
     if (jListPremiacoes.getSelectedIndex() != -1) {
         premiacaoListModel.removeElementAt(jListPremiacoes.getSelectedIndex());
     }
-}//GEN-LAST:event_jButtonRemoverPremiacaoActionPerformed
+}                                                       
 
-private void jTableListaBoxeadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableListaBoxeadoresMouseClicked
+private void jTableListaBoxeadoresMouseClicked(java.awt.event.MouseEvent evt) {                                                   
     if (jTableListaBoxeadores.isEnabled()) {
         DefaultTableModel model = (DefaultTableModel) jTableListaBoxeadores.getModel();
         String nome = (String) model.getValueAt(jTableListaBoxeadores.getSelectedRow(), 0);
         this.pesquisarBoxeador(nome);
     }
-}//GEN-LAST:event_jTableListaBoxeadoresMouseClicked
+}                                                  
 
-private void jTextFieldDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDataNascimentoActionPerformed
+private void jTextFieldDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {                                                         
 // TODO add your handling code here:
-}//GEN-LAST:event_jTextFieldDataNascimentoActionPerformed
+}                                                        
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton jButtonAdicionarPremiacao;
     private javax.swing.JButton jButtonAdicionarTelefone;
     private javax.swing.JButton jButtonAlterar;
@@ -1203,5 +1204,5 @@ private void jTextFieldDataNascimentoActionPerformed(java.awt.event.ActionEvent 
     private javax.swing.JTextField jTextFieldTotalLutas;
     private javax.swing.JTextField jTextFieldTotalNocaute;
     private javax.swing.JTextField jTextFieldTotalVitorias;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }

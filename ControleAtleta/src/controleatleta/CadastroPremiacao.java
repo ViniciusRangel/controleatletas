@@ -6,6 +6,10 @@ public class CadastroPremiacao extends javax.swing.JDialog {
 
     private Premiacao premiacao;
 
+    CadastroPremiacao(CadastroPilotoCorrida aThis, boolean b) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
     public Premiacao getPremiacao() {
         return premiacao;
     }

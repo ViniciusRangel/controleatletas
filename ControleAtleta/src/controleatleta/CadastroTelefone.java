@@ -13,6 +13,10 @@ package controleatleta;
 public class CadastroTelefone extends javax.swing.JDialog {
     private String telefone;
 
+    CadastroTelefone(CadastroPilotoCorrida aThis, boolean b) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
     public String getTelefone() {
         return this.telefone;
     }
